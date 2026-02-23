@@ -2,8 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.services)
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.3.10"
-
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -51,14 +50,17 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.firestore.ktx)
+
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.creedentials.play.services.auth)
     implementation(libs.googleid)
 
-    implementation(platform(libs.bom))
+    implementation(platform(libs.supabase.bom))
     implementation(libs.postgrest.klt)
     implementation(libs.auth.kt)
 
